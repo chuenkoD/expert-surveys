@@ -31,10 +31,10 @@
 
 ## Посилання
 
-[Google Forms](https://www.google.com/intl/ru_ua/forms/about/)
-[SurveyMonkey](https://ru.surveymonkey.com/)
-[Survio](https://www.survio.com/ru/)
-[SurveyJS](https://surveyjs.io/)
-[Система “ОСА”](https://oca.com.ua/)
+[Google Forms](https://www.google.com/intl/ru_ua/forms/about/)<br/>
+[SurveyMonkey](https://ru.surveymonkey.com/)<br/>
+[Survio](https://www.survio.com/ru/)<br/>
+[SurveyJS](https://surveyjs.io/)<br/>
+[Система “ОСА”](https://oca.com.ua/)<br/>
 
 *[Розділ містить повний список всіх документів, про які згадується.]*
