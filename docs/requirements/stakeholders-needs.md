@@ -20,7 +20,7 @@
 
 
 ### Посилання
-*
+
 [link[0]](https://osvita.ua/vnz/reports/sociology/12369/)
 
 [link[1]](http://socio.125mb.com/metodologiya-ekspertnogo-oprosa-17664.html)
@@ -34,7 +34,6 @@
 [link[5]](metodika-provedennya-ta-ocinki-rezultativ-ekspertnix-ocinok-na-prikladi-vprovadzhennya-sistemi-monitoringu-zdorov-ya-naselennya-na-rivni-pervinnoi-mediko-sanitarnoi-dopomogi)
 
 [link[6]](https://pidru4niki.com/12590605/sotsiologiya/ekspertne_otsinyuvannya)
-*
 
 ## Короткий зміст
 
