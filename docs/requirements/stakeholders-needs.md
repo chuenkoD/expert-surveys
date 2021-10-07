@@ -21,12 +21,13 @@
 
 ### Посилання
 
-*https://osvita.ua/vnz/reports/sociology/12369/
-http://socio.125mb.com/metodologiya-ekspertnogo-oprosa-17664.html
-http://socio.125mb.com/vidyi-ekspertnogo-oprosa-17665.html
-https://buromt.com.ua/uk/expert-survey/
-https://www.umj.com.ua/article/9571/metodika-provedennya-ta-ocinki-rezultativ-ekspertnix-ocinok-na-prikladi-vprovadzhennya-sistemi-monitoringu-zdorov-ya-naselennya-na-rivni-pervinnoi-mediko-sanitarnoi-dopomogi
-https://pidru4niki.com/12590605/sotsiologiya/ekspertne_otsinyuvannya*
+*[#1](https://osvita.ua/vnz/reports/sociology/12369/)
+[#2](http://socio.125mb.com/metodologiya-ekspertnogo-oprosa-17664.html)
+[#3](http://socio.125mb.com/vidyi-ekspertnogo-oprosa-17665.html)
+[#4](https://buromt.com.ua/uk/expert-survey/)
+[#5](https://www.umj.com.ua/article/9571/)
+[#6](metodika-provedennya-ta-ocinki-rezultativ-ekspertnix-ocinok-na-prikladi-vprovadzhennya-sistemi-monitoringu-zdorov-ya-naselennya-na-rivni-pervinnoi-mediko-sanitarnoi-dopomogi)
+[#7](https://pidru4niki.com/12590605/sotsiologiya/ekspertne_otsinyuvannya)*
 
 
 ## Короткий зміст
