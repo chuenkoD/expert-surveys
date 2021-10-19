@@ -10,30 +10,12 @@
 
 ### Контекст
 
-*[Короткий опис того, з якими проектами пов'язаний цей документ, на що він впливає.]*
+Цей документ формує технічне завдання для проекту системи організації та управління опитуваннями експертів "Expert Surveys".
 
 
 ### Основні визначення та скорочення
 
-*[Розділ містить визначення всіх термінів та скорочень, необхідних для правильного
-тлумачення вимог. Можна зробити посилання на документ, в якому поданий аналіз предметної області.]*
-
-
-### Посилання
-
-[link[0]](https://osvita.ua/vnz/reports/sociology/12369/)
-
-[link[1]](http://socio.125mb.com/metodologiya-ekspertnogo-oprosa-17664.html)
-
-[link[2]](http://socio.125mb.com/vidyi-ekspertnogo-oprosa-17665.html)
-
-[link[3]](https://buromt.com.ua/uk/expert-survey/)
-
-[link[4]](https://www.umj.com.ua/article/9571/)
-
-[link[5]](metodika-provedennya-ta-ocinki-rezultativ-ekspertnix-ocinok-na-prikladi-vprovadzhennya-sistemi-monitoringu-zdorov-ya-naselennya-na-rivni-pervinnoi-mediko-sanitarnoi-dopomogi)
-
-[link[6]](https://pidru4niki.com/12590605/sotsiologiya/ekspertne_otsinyuvannya)
+Див. ["Аналіз предметної області"](https://github.com/readme-experts/expert-surveys/blob/master/docs/requirements/state-of-the-art.md).
 
 ## Короткий зміст
 
