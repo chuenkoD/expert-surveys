@@ -2,12 +2,11 @@
 
 ## Вступ
 
-*[Вступ повинен містити короткий огляд всього документу.]*
+*Цей розділ надає ознайомчу інформацію для зацікавлених у використанні цього сервісу осіб, які можуть бути як викладачами та студентами, так і менеджерами та аналітиками, для яких необхідна організація опитувань спеціалістів, збір та аналіз інформації.*
 
 ### Мета 
 
-*[Визначення мети цієї сукупності вимог. Зазвичай такою метою є створення та впровадження 
- інформаційної системи відповідного призначення.]*
+*Створення сучасного, зручного та гнучкого сервісу опитування експертів, який дозволить його користувачам збирати та аналізувати інформацію ефективно та продуктивно.*
 
 ### Контекст
 
@@ -22,8 +21,19 @@
 
 ### Посилання
 
-*[Розділ містить повний список всіх документів, про які згадується.]*
+[link[0]](https://osvita.ua/vnz/reports/sociology/12369/)
 
+[link[1]](http://socio.125mb.com/metodologiya-ekspertnogo-oprosa-17664.html)
+
+[link[2]](http://socio.125mb.com/vidyi-ekspertnogo-oprosa-17665.html)
+
+[link[3]](https://buromt.com.ua/uk/expert-survey/)
+
+[link[4]](https://www.umj.com.ua/article/9571/)
+
+[link[5]](metodika-provedennya-ta-ocinki-rezultativ-ekspertnix-ocinok-na-prikladi-vprovadzhennya-sistemi-monitoringu-zdorov-ya-naselennya-na-rivni-pervinnoi-mediko-sanitarnoi-dopomogi)
+
+[link[6]](https://pidru4niki.com/12590605/sotsiologiya/ekspertne_otsinyuvannya)
 
 ## Короткий зміст
 
