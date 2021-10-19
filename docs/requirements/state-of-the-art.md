@@ -171,3 +171,8 @@ Google Forms є найбільш зручним сервісом з перелі
 * [Експерт](https://uk.wikipedia.org/wiki/%D0%95%D0%BA%D1%81%D0%BF%D0%B5%D1%80%D1%82)
 * [Експертне оцінювання](https://pidru4niki.com/12590605/sotsiologiya/ekspertne_otsinyuvannya)
 * [Анкета](https://uk.wikipedia.org/wiki/%D0%90%D0%BD%D0%BA%D0%B5%D1%82%D0%B0)
+* [Роль, види та методи соціологічного опитування](https://osvita.ua/vnz/reports/sociology/12369/)
+* [Методологія експертного опитування](http://socio.125mb.com/metodologiya-ekspertnogo-oprosa-17664.html)
+* [Види експертного опитування](http://socio.125mb.com/vidyi-ekspertnogo-oprosa-17665.html)
+* [ПРОВЕДЕННЯ ЕКСПЕРТНИХ ОПИТУВАНЬ](https://buromt.com.ua/uk/expert-survey/)
+* [Методика проведення та оцінки результатів експертних оцінок (на прикладі впровадження системи моніторингу здоров’я населення на рівні первинної медико-санітарної допомоги)](https://www.umj.com.ua/article/9571/)
