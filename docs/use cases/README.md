@@ -8,94 +8,16 @@
     padding: 1em;"
 >
 
+**Діаграма прецедентів**
+
 ![Image alt](https://www.plantuml.com/plantuml/png/ZLExJkD05Etp5QDiiPMBR3P9iucoMcr9IOq6Pq0Hnexy40zH94OyEbFma10Iy0UM4qDa5ESNxlqZXZiGao516ScMVNJEcNlFt6bxFdVzODSg-LtV4YNsllviERRFlEwXQ5Rgp7GinsrkMjpSQS4D93ynWcV88MCuW2d4C88CZo6HNnEOO4GsmkumPLgYVsxwZilAS0ivzc6C0moL1i_AZ7jitHCk-o7audnES0KPRPDY7qEY_j_l2TTVIBw352Ro6S7Jcu3eQzpcsqlCBoGxXXUynX36a17_hysj0w_m9q7W2PDxWYG9Xge9cKACfr8SgHR-RLGqyeEiuf9wxUlKNnhr4KD8o3TLCJ8PyLGc5HRP5kgglX4r7SDGaLTm-Aqvt4DAUmzb716CljNMlcXpF8VnYhNNTRNKvNW2EHtRAWuDTIZqei4nWfxHelnrIEKy6mAZu-pPX5CL7xDKm8qbzDfYEi6paIdmwc9SfZxl7nX7BQhtaxs65Yu5t9RNIrxRLm00)
 
-@startuml
-title
-        <font size=16 color=black>Зв'язок спадкування
-    end title
+![Image alt](//www.plantuml.com/plantuml/png/XPBDIiD058NtVOgXNNUWwSv5AOYFu4wGePsTff8Vx39M11U281gN-WYnjbAZILxXt3Vo9WCc94CxYv3SUxupzoTJFr1U45vUz7g2Zve52q_qyOAKRb1WIn6j-aBvucHvfRr033GVfOmwzFLC-PhrRnGXfplasE0BMsJ8w57mPu4ThUWMQoGcM9cT7f-Fn42fqghbzCxqXiMVJKXWJJ672-JcZKNV_qvorF9unI-BCYGTZkAQwdBFLVs9_LuBxxJu9-pmGJ55egemPUA77f2MepdKWXntck12gWNSrmCjh7C-S_UFMZfcNsQ7m_dYsXrEoaGLDVSB6Sg9MSoHNWRQdVjrrh5b6t0JbpO3jZYe6DiLKtxo__a7)
 
+![Image alt](//www.plantuml.com/plantuml/png/XL6nIWD14EtlAuQapa9IMeI0jQMr3CbYenUutKFBYm6r4onI2Vv252y6DEilpFoHpzq8AnncZhjXthptRdPsuZnNlhwyA0f2yDJFA-h9axIom_ic6scrwH4xEk6Ipsr5VOjWJeBQsIax2ycp1BsNhJPHkjC7aY1V06vqAQ-oJc1qEZq-6rAVEThyTNcKhRpeIXlI1TG1tm1WIIXo_zpA33j6MS3eu_UlXBJ-Vnw3v-29z4xQMBvZF7Hl3Sdd7jheAZSRfVtibpQOpQ_AmVYd5-548bERSTh6aRtsjfov8cld19DHCiQecr5Ca72ftm00)
 
-    actor "Користувач" as User #eeeeaa
-    actor "Експерт" as Expert #eeeeaa
-    actor "Менеджер" as Manager #eeeeaa
-    actor "Аналітик" as Analyst #eeeeaa
+![Image alt](//www.plantuml.com/plantuml/png/SoWkIImgAStDuKfCBialKb2wCE72tWiRBko-EErYquKT5tOfAIGMApZc9UPK5fSeAAS2GM8Y5vS249GMfoOd5gS2jIouiFN25g2cpHURBsm2qdilxBtOht1XtuNz5tPSR48M19iMwXnlgA2Sc0Wo2isaAK1D89CGfa3CmD2lPuYcSzA57M2Tkozi9Q3J2B_h2UWs1diU5YAwAVdbURfs81cGCDHf2dgbUdOGRrgbLfIavgKK8sIDyCeQOvDr09B0A080)
 
-    usecase "Авторизація" as UC_1
-    usecase "Реєстрація" as UC_2
-    usecase "Створення опитування" as UC_3
-    usecase "Редагування опитування" as UC_4
-    usecase "Перегляд опитування" as UC_5
-    usecase "Поширення опитування" as UC_6
-    usecase "Проходження опитування" as UC_7
-
-    
-    User -up->UC_1
-    User -up->UC_2
-    Manager -down->UC_6
-    Expert -down->UC_7
-    Manager -down->UC_5
-    Expert -down->UC_5
-    Analyst -down->UC_3
-    Analyst -down->UC_4
-
-    Manager -u-|> User
-    Expert -u-|> User
-    Analyst -u-|> User
-@enduml
-
-@startuml
-
-    actor "Експерт" as Expert #eeeeaa
-
-    usecase "Проходження опитування" as UC_1 #aaeeaa
-    usecase "Редагування відповідей" as UC_1.1
-    usecase "Зміна відповіді" as UC_1.1.1
-    usecase "Додавання відповіді" as UC_1.1.2
-    usecase "Вибір декількох відповідей" as UC_1.1.3
-    usecase "Завершення проходження \n опитування" as UC_1.2
-
-    Expert-down->UC_1
-    UC_1.1 .u.> UC_1 :extends
-    UC_1.2 .u.> UC_1 :extends
-
-    UC_1.1.1 .u.> UC_1.1 :extends
-    UC_1.1.2 .u.> UC_1.1 :extends
-    UC_1.1.3 .u.> UC_1.1 :extends
-@enduml
-
-@startuml
-
-    actor "Менеджер" as Manager #eeeeaa
-
-    usecase "Поширення опитування" as UC_1 #aaeeaa
-    usecase "Вибір способу поширення" as UC_1.1
-    usecase "Посилання на опитування" as UC_1.1.1
-    usecase "Поширення через соц. мережі" as UC_1.1.2
-
-    Manager-down->UC_1
-    UC_1.1 .u.> UC_1 :extends
-
-    UC_1.1.1 .u.> UC_1.1 :extends
-    UC_1.1.2 .u.> UC_1.1 :extends
-
-@enduml
-
-@startuml
-actor "Аналітик" as Analyst #eeeeaa
-
-    usecase "Редагування опитування" as UC_1 #aaeeaa
-    usecase "Додавання питання" as UC_1.1
-    usecase "Видалення питання" as UC_1.2
-    usecase "Редагування питання" as UC_1.3
-
-    Analyst-down->UC_1
-    UC_1.1 .u.> UC_1 :extends
-    UC_1.2 .u.> UC_1 :extends
-    UC_1.3 .u.> UC_1 :extends
-@enduml
-
-**Діаграма прецедентів**
 
 </center>
 
