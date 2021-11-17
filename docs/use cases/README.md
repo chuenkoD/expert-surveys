@@ -1,5 +1,8 @@
-# Модель прецедентів
+# Вступ
 
+Цей документ містить в собі опис основних сценаріїв роботи системи.
+
+# Модель прецедентів
 
 <center style="
     border-radius:4px;
@@ -19,5 +22,12 @@
 ![4](https://www.plantuml.com/plantuml/png/SoWkIImgAStDuKfCBialKb2wCE72tWiRBko-EErYquKT5tOfAIGMApZc9UPK5fSeAAS2GM8Y5vS249GMfoOd5gS2jIouiFN25g2cpHURBsm2qdilxBtOht1XtuNz5tPSR48M19iMwXnlgA2Sc0Wo2isaAK1D89CGfa3CmD2lPuYcSzA57M2Tkozi9Q3J2B_h2UWs1diU5YAwAVdbURfs81cGCDHf2dgbUdOGRrgbLfIavgKK8sIDyCeQOvDr09B0A080)
 
 
-</center>
+## Сценарії використання
 
+### Сценарій №3. Перегляд статистики опитування
+
+![bc-3](https://www.plantuml.com/plantuml/png/hPFFIW9H5CRtynJt1I8ZQE6eIBNfCJH72im9dJRXOdJ0Df8WeQkig0SOJ57JgLSuvutwxfz1af69wCB0vSuvl-yxtzmfDhrImxkvgbarf-g92wTKSHf2BKjWvQfktHFdRirjv3EPZ6XUtZhvWwD2hbmuEytczii5SNooTvXMIuyKqfmc5EeUUg8P-pIZTrfndwQ2szoX4Cz2xHRqGGj1d_I5Wmu7ifCYYhYVglJATm2rAT8GepT2_ngyYJvFfSJ-fXoOlfY4IU0O71vAgzmJgd2EmXNtz1GyfCdVt3zleupg61mVpjSnAJ6nLFn0rW5-Zv0m023Q8K1Tp3CoQWCCC0Ks01XbbZ0hbJzMmSSnBmKONKmKWU-3kLJy3SwfLyoLiwpMzZTggJfrFzKkgxANll1s1UA3e3c5EcGXDH3vhsAofTgBEPd9ufPHsEJCmG--lRFZ3QA-hayGuo3n7jWxnWKnjl1lI4JeNjjM4M7ZF_y6)
+
+### Сценарій №6. Перегляд статистики опитування
+  
+![bc-6](https://www.plantuml.com/plantuml/png/SYWkIImgAStDuSf9JIjHo4XDJ4ajKW03BX1XavQVLwAGd9-JNsHhO62WK9nPbMfhQ6PdasJdwM9bevzaf-3ah6i6QALgSXA8eV2UKynIDnv0DXv6j-e1M619q0NHX21k54syG1r12inqhl2z6_drTHhK3Eb64ZAqxtq_xvkMN2zUOB562HinklxaTocZi8iQjJmKQ6G8Nt1byO4T7BwmIhKrDxSov-8MQLCCLeHKkZrgyIXPN-w17WsSc9zAMR_l5B5omsw7BLph-bb9IKvVrCsolAexzbExKcE9wH5RiZUXBgO8fCdyHkv2PwVjam8p-F-D8h8nQ-ewFZcrJ0Wdg6I7BLHf9vFmPCsm6iEXoX7AX5ynanfUE-O5IeAMdOB7sTZUIBOcXA9Yg6IwG_Fa7SAXWgKDxlkeocUbXj9ypBVhkA7AEfc6rqyVzvouvbYKZzDO6JEDfzRODCY6GCI4DjB6JvP_eKVCQz8E6_BBM8rRZZZ7HldtT1UNv-qLxVK6Vq_ZGFlqFkklqtZBwAjzhxC3EVH9zZlRGI9Of8XbT1ZUZQQJg-j-xuoU-VVo3G00)
