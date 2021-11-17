@@ -5,3 +5,7 @@
 - ER-модель
 - реляційна схема
 
+## Модель бізнес-об'єктів 
+![1](https://www.plantuml.com/plantuml/png/XPFDJy8m0CNl-okQUIDWv4uMCEx0GH9r97gShYOr-rZw8V3VMmlDoyRZuzR-VdIlxUlIs59RrzI9RAso1x5gpKvg8nQBV5EiYuyiIuGOidjLURpPFZ_chracxhx3xropSc-zMEJlnJMjActfjQTLaL_Jd95wVU73iFDzBxKbyS6knuVsqtsoz12tXXmKI4ZSbesyS0OGcrBLDwM-D6RNwUgcoBS7wyL9OrNNqkYWV1qYqdlcug4dXm7ppUbVUI2vm7YgiKOoKOqaubhNgw-RNgYoP5LEnBWICpUR7ESyGml8F2wUC3MOJGGwxa7bmMaS26ezG9w5DuRbuXWad2TXUC24uTMEQI86FGiOCv6YN9IZKsFk1TGbR3QE0q5324Cj24CNE0m56B8atfL8vzDv-XzLf0_JINf-DSTv_--ZYlF2rWAOrN69au40yIFLs5ZAjd9D_GS0)
+
+
