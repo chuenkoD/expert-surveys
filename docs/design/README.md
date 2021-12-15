@@ -14,6 +14,8 @@
 >
 
 @startuml
+entity SelectedAlt <<ENTITY>>
+
   entity Alt <<ENTITY>>
   entity Alt.id <<NUMBER>> #ffffff
   entity Alt.text <<TEXT>> #ffffff
@@ -94,6 +96,8 @@
   Survey "1,1" -l- "0,*" SurveyAction
   Question "1,1" -d- "0,*" Alt
   Answer"1,1" -d- "0,*" Alt
+  Answer"1,1" -d- "0,*" SelectedAlt
+  SelectedAlt"1,1"-r- "0,*"Alt
 @enduml
 
 </center>
