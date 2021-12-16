@@ -62,9 +62,9 @@ entity SelectedAlt <<ENTITY>>
   Alt.text -u-* Alt
   Alt.type -u-* Alt
 
-  SurveyState.name -l-* SurveyState
+  SurveyState.name -r-* SurveyState
 
-  SurveyAction.at -r-* SurveyAction
+  SurveyAction.at -d-* SurveyAction
 
   Answer.id -u-* Answer
   Answer.text -u-* Answer
@@ -82,17 +82,15 @@ entity SelectedAlt <<ENTITY>>
   Survey.date -d-* Survey
 
 
-  User "1,1" -u- "0,*" Expert
-  Expert "0,*"-d- "1,1" Answer
+  User "1,0" -u- "1, 1" Expert
+  Expert "0,*"-r- "1,1" Answer
   Question"1,1"-l- "0,*" Answer
-  Survey "1,1" -d- "0,*" Answer
   Survey "1,1" -d- "0,*" Question
-  Survey "1,1" -r- "0,*" SurveyState
-  Survey "1,1" -l- "0,*" SurveyAction
+  Survey "1,1" -u- "0,*" SurveyAction
+  SurveyAction"1,1" -u- "0,*" SurveyState
   Question "1,1" -d- "0,*" Alt
-  Answer"1,1" -d- "0,*" Alt
-  Answer"1,1" -d- "0,*" SelectedAlt
-  SelectedAlt"1,1"-r- "0,*"Alt
+  Answer"1,1" -u- "0,*" SelectedAlt
+  SelectedAlt"1,1"-u- "0,*"Alt
 @enduml
 ```
 
@@ -104,7 +102,7 @@ entity SelectedAlt <<ENTITY>>
 >
    
 @startuml
-  entity SelectedAlt <<ENTITY>>
+entity SelectedAlt <<ENTITY>>
 
   entity Alt <<ENTITY>>
   entity Alt.id <<NUMBER>> #ffffff
@@ -157,9 +155,9 @@ entity SelectedAlt <<ENTITY>>
   Alt.text -u-* Alt
   Alt.type -u-* Alt
 
-  SurveyState.name -l-* SurveyState
+  SurveyState.name -r-* SurveyState
 
-  SurveyAction.at -r-* SurveyAction
+  SurveyAction.at -d-* SurveyAction
 
   Answer.id -u-* Answer
   Answer.text -u-* Answer
@@ -177,17 +175,15 @@ entity SelectedAlt <<ENTITY>>
   Survey.date -d-* Survey
 
 
-  User "1,1" -u- "0,*" Expert
-  Expert "0,*"-d- "1,1" Answer
+  User "1,0" -u- "1, 1" Expert
+  Expert "0,*"-r- "1,1" Answer
   Question"1,1"-l- "0,*" Answer
-  Survey "1,1" -d- "0,*" Answer
   Survey "1,1" -d- "0,*" Question
-  Survey "1,1" -r- "0,*" SurveyState
-  Survey "1,1" -l- "0,*" SurveyAction
+  Survey "1,1" -u- "0,*" SurveyAction
+  SurveyAction"1,1" -u- "0,*" SurveyState
   Question "1,1" -d- "0,*" Alt
-  Answer"1,1" -d- "0,*" Alt
-  Answer"1,1" -d- "0,*" SelectedAlt
-  SelectedAlt"1,1"-r- "0,*"Alt
+  Answer"1,1" -u- "0,*" SelectedAlt
+  SelectedAlt"1,1"-u- "0,*"Alt
 @enduml
 </center>
     
@@ -236,6 +232,7 @@ entity User <<ENTITY>> {
   }
   
   entity SelectedAlt {
+id: INT
   }
   
   entity SurveyState {
@@ -248,20 +245,19 @@ entity User <<ENTITY>> {
   
   
 
-  SurveyAction -> User: actor
-  SurveyAction -u-> User: collaborator
+SurveyAction "1, 1" <-u- "0, *" SurveyState 
+SurveyAction "1, 1" <-u- "0, *" Survey
+SurveyAction -> User: actor
+SurveyAction -u-> User: collaborator
 
-  Answer "0, *" -u- "1, 1" Survey
-  Answer "0, *" -u- "1, 1" Question
-  Survey "0, *" -u- "1, 1" Question
-  Answer "1, 1" -u- "0, *" Expert
-  Expert "0, *" -u- "1, 1" User
-  Question "1,1" -d- "0,*" Alt
-  Answer "1,1" -d- "0,*" Alt
-  Answer"1,1" -d- "0,*" SelectedAlt
-  SelectedAlt"1,1"-r- "0,*"Alt
-  Survey "1,1" -r- "0,*" SurveyState
-  Survey "1,1" -l- "0,*" SurveyAction
+  Answer "1, 1" <-u- "0, *" Question
+  Survey "0, *" -u-> "1, 1" Question
+  Answer "1, 1" <-u- "0, *" Expert
+  Expert "1, 1" <-u- "1, 1" User
+  Question "1, 1"<- "0, *" Alt
+  
+  Answer "1, 1" <-u- "0, *" SelectedAlt
+  SelectedAlt "1, 1" <-u- "0, *" Alt
 @enduml
 ```
 
@@ -314,6 +310,7 @@ entity User <<ENTITY>> {
   }
   
   entity SelectedAlt {
+id: INT
   }
   
   entity SurveyState {
@@ -326,20 +323,19 @@ entity User <<ENTITY>> {
   
   
 
-  SurveyAction -> User: actor
-  SurveyAction -u-> User: collaborator
+SurveyAction "1, 1" <-u- "0, *" SurveyState 
+SurveyAction "1, 1" <-u- "0, *" Survey
+SurveyAction -> User: actor
+SurveyAction -u-> User: collaborator
 
-  Answer "0, *" -u- "1, 1" Survey
-  Answer "0, *" -u- "1, 1" Question
-  Survey "0, *" -u- "1, 1" Question
-  Answer "1, 1" -u- "0, *" Expert
-  Expert "0, *" -u- "1, 1" User
-  Question "1,1" -d- "0,*" Alt
-  Answer "1,1" -d- "0,*" Alt
-  Answer"1,1" -d- "0,*" SelectedAlt
-  SelectedAlt"1,1"-r- "0,*"Alt
-  Survey "1,1" -r- "0,*" SurveyState
-  Survey "1,1" -l- "0,*" SurveyAction
+  Answer "1, 1" <-u- "0, *" Question
+  Survey "0, *" -u-> "1, 1" Question
+  Answer "1, 1" <-u- "0, *" Expert
+  Expert "1, 1" <-u- "1, 1" User
+  Question "1, 1"<- "0, *" Alt
+  
+  Answer "1, 1" <-u- "0, *" SelectedAlt
+  SelectedAlt "1, 1" <-u- "0, *" Alt
 @enduml
 </center>
 
