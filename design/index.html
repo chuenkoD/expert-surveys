@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Проєктування бази даних | Система організації та управління опитуваннями експертів</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/expert-surveys/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="description" content="Курсова робота з дисципліни "Бази даних"">
+    
+    <link rel="preload" href="/expert-surveys/assets/css/0.styles.67328919.css" as="style"><link rel="preload" href="/expert-surveys/assets/js/app.2e01ffb3.js" as="script"><link rel="preload" href="/expert-surveys/assets/js/2.d4f7208e.js" as="script"><link rel="preload" href="/expert-surveys/assets/js/17.83de84c4.js" as="script"><link rel="prefetch" href="/expert-surveys/assets/js/10.9a0a9a98.js"><link rel="prefetch" href="/expert-surveys/assets/js/11.7227b195.js"><link rel="prefetch" href="/expert-surveys/assets/js/12.e2b6b404.js"><link rel="prefetch" href="/expert-surveys/assets/js/13.2b616a60.js"><link rel="prefetch" href="/expert-surveys/assets/js/14.868ab3f5.js"><link rel="prefetch" href="/expert-surveys/assets/js/15.85dbce20.js"><link rel="prefetch" href="/expert-surveys/assets/js/16.5162644d.js"><link rel="prefetch" href="/expert-surveys/assets/js/18.6412487f.js"><link rel="prefetch" href="/expert-surveys/assets/js/19.41d062f6.js"><link rel="prefetch" href="/expert-surveys/assets/js/20.4d61edb2.js"><link rel="prefetch" href="/expert-surveys/assets/js/21.0805c7c6.js"><link rel="prefetch" href="/expert-surveys/assets/js/22.322715b2.js"><link rel="prefetch" href="/expert-surveys/assets/js/23.655b243b.js"><link rel="prefetch" href="/expert-surveys/assets/js/24.5333cc56.js"><link rel="prefetch" href="/expert-surveys/assets/js/25.4d9e7944.js"><link rel="prefetch" href="/expert-surveys/assets/js/26.87ff770b.js"><link rel="prefetch" href="/expert-surveys/assets/js/3.61039f57.js"><link rel="prefetch" href="/expert-surveys/assets/js/4.c4e9c6bf.js"><link rel="prefetch" href="/expert-surveys/assets/js/5.8b0efd2b.js"><link rel="prefetch" href="/expert-surveys/assets/js/6.39c15d54.js"><link rel="prefetch" href="/expert-surveys/assets/js/7.ee8333dc.js"><link rel="prefetch" href="/expert-surveys/assets/js/8.62f9d997.js"><link rel="prefetch" href="/expert-surveys/assets/js/9.cce8dc66.js">
+    <link rel="stylesheet" href="/expert-surveys/assets/css/0.styles.67328919.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/expert-surveys/" class="home-link router-link-active"><!----> <span class="site-name">Система організації та управління опитуваннями експертів</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/expert-surveys/" class="nav-link">
+  Початок
+</a></div> <a href="https://github.com/readme-experts/expert-surveys" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/expert-surveys/" class="nav-link">
+  Початок
+</a></div> <a href="https://github.com/readme-experts/expert-surveys" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/expert-surveys/intro/" class="sidebar-link">Вступ</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/expert-surveys/requirements/" class="sidebar-heading clickable"><span>Розроблення загальних вимог до системи</span> <span class="arrow right"></span></a> <!----></section></li><li><a href="/expert-surveys/use%20cases/" class="sidebar-link">Розроблення вимог до функціональности системи</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/expert-surveys/use%20cases/#сценаріі-використання" class="sidebar-link">Сценарії використання</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/expert-surveys/use%20cases/#сценаріи-no1-запит-на-створення-нового-опитування" class="sidebar-link">Сценарій №1. Запит на створення нового опитування</a></li><li class="sidebar-sub-header"><a href="/expert-surveys/use%20cases/#сценаріи-no2-редагування-опитування" class="sidebar-link">Сценарій №2. Редагування опитування</a></li><li class="sidebar-sub-header"><a href="/expert-surveys/use%20cases/#сценаріи-no3-перегляд-статистики-опитування" class="sidebar-link">Сценарій №3. Перегляд статистики опитування</a></li><li class="sidebar-sub-header"><a href="/expert-surveys/use%20cases/#сценаріи-no4-надсилання-запрошення-для-участі-в-опитуванні" class="sidebar-link">Сценарій №4. Надсилання запрошення для участі в опитуванні</a></li><li class="sidebar-sub-header"><a href="/expert-surveys/use%20cases/#сценаріи-no5-отримання-результату-проходження-опитування" class="sidebar-link">Сценарій №5. Отримання результату проходження опитування</a></li><li class="sidebar-sub-header"><a href="/expert-surveys/use%20cases/#сценаріи-no6-перегляд-статистики-опитування" class="sidebar-link">Сценарій №6. Перегляд статистики опитування</a></li></ul></li></ul></li><li><a href="/expert-surveys/design/" aria-current="page" class="active sidebar-link">Проектування інформаційного забезпечення</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/expert-surveys/design/#модель-бізнес-об-єктів" class="sidebar-link">Модель бізнес-об'єктів</a></li><li class="sidebar-sub-header"><a href="/expert-surveys/design/#er-модель" class="sidebar-link">ER-модель</a></li><li class="sidebar-sub-header"><a href="/expert-surveys/design/#реляціина-схема" class="sidebar-link">Реляційна схема</a></li></ul></li><li><a href="/expert-surveys/software/" class="sidebar-link">Реалізація інформаційного та програмного забезпечення</a></li><li><a href="/expert-surveys/test/" class="sidebar-link">Тестування працездатності системи</a></li><li><a href="/expert-surveys/conclusion/" class="sidebar-link">Висновки</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="проєктування-бази-даних"><a href="#проєктування-бази-даних" class="header-anchor">#</a> Проєктування бази даних</h1> <p>В рамках проекту розробляється:</p> <ul><li>модель бізнес-об'єктів</li> <li>ER-модель</li> <li>реляційна схема</li></ul> <h2 id="модель-бізнес-об-єктів"><a href="#модель-бізнес-об-єктів" class="header-anchor">#</a> Модель бізнес-об'єктів</h2> <div class="language-md extra-class"><pre class="language-md"><code>@startuml
+entity SelectedAlt &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ENTITY</span><span class="token punctuation">&gt;</span></span>&gt;
+
+  entity Alt &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ENTITY</span><span class="token punctuation">&gt;</span></span>&gt;
+  entity Alt.id &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>NUMBER</span><span class="token punctuation">&gt;</span></span>&gt; #ffffff
+  entity Alt.text &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TEXT</span><span class="token punctuation">&gt;</span></span>&gt; #ffffff
+  entity Alt.type &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TEXT</span><span class="token punctuation">&gt;</span></span>&gt; #ffffff
+
+  entity SurveyState &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ENTITY</span><span class="token punctuation">&gt;</span></span>&gt;
+  entity SurveyState.name &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TEXT</span><span class="token punctuation">&gt;</span></span>&gt; #ffffff
+
+  entity SurveyAction &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ENTITY</span><span class="token punctuation">&gt;</span></span>&gt;
+  entity SurveyAction.at &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DATE</span><span class="token punctuation">&gt;</span></span>&gt; #ffffff
+
+  entity Answer &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ENTITY</span><span class="token punctuation">&gt;</span></span>&gt;
+  entity Answer.id &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>NUMBER</span><span class="token punctuation">&gt;</span></span>&gt; #ffffff
+  entity Answer.text &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TEXT</span><span class="token punctuation">&gt;</span></span>&gt; #ffffff
+  entity Answer.date &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DATE</span><span class="token punctuation">&gt;</span></span>&gt; #ffffff
+  entity Answer.userId &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>NUMBER</span><span class="token punctuation">&gt;</span></span>&gt; #ffffff
+  
+  entity Expert &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ENTITY</span><span class="token punctuation">&gt;</span></span>&gt;
+  entity Expert.id &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>NUMBER</span><span class="token punctuation">&gt;</span></span>&gt; #ffffff
+  entity Expert.job &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TEXT</span><span class="token punctuation">&gt;</span></span>&gt; #ffffff
+  
+  entity User &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ENTITY</span><span class="token punctuation">&gt;</span></span>&gt;
+  entity User.username &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TEXT</span><span class="token punctuation">&gt;</span></span>&gt; #ffffff
+  entity User.mail &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TEXT</span><span class="token punctuation">&gt;</span></span>&gt; #ffffff
+  entity User.password &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TEXT</span><span class="token punctuation">&gt;</span></span>&gt; #ffffff
+  entity User.id &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>NUMBER</span><span class="token punctuation">&gt;</span></span>&gt; #ffffff
+
+  entity Question &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ENTITY</span><span class="token punctuation">&gt;</span></span>&gt;
+  entity Question.id &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>NUMBER</span><span class="token punctuation">&gt;</span></span>&gt; #ffffff
+  entity Question.text &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TEXT</span><span class="token punctuation">&gt;</span></span>&gt; #ffffff
+  entity Question.type &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TEXT</span><span class="token punctuation">&gt;</span></span>&gt; #ffffff
+
+  entity Survey &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ENTITY</span><span class="token punctuation">&gt;</span></span>&gt;
+  entity Survey.id &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>NUMBER</span><span class="token punctuation">&gt;</span></span>&gt; #ffffff
+  entity Survey.text &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TEXT</span><span class="token punctuation">&gt;</span></span>&gt; #ffffff
+  entity Survey.type &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TEXT</span><span class="token punctuation">&gt;</span></span>&gt; #ffffff
+  entity Survey.topic &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TEXT</span><span class="token punctuation">&gt;</span></span>&gt; #ffffff
+  entity Survey.date &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DATE</span><span class="token punctuation">&gt;</span></span>&gt; #ffffff
+  
+  User.username -u-<span class="token italic"><span class="token punctuation">*</span><span class="token content"> User
+  User.mail -u-</span><span class="token punctuation">*</span></span> User
+  User.password -u-<span class="token italic"><span class="token punctuation">*</span><span class="token content"> User
+  User.id -u-</span><span class="token punctuation">*</span></span> User
+
+  Expert.id -d-<span class="token italic"><span class="token punctuation">*</span><span class="token content"> Expert
+  Expert.job -d-</span><span class="token punctuation">*</span></span> Expert
+
+  Alt.id -u-<span class="token italic"><span class="token punctuation">*</span><span class="token content"> Alt
+  Alt.text -u-</span><span class="token punctuation">*</span></span> Alt
+  Alt.type -u-* Alt
+
+  SurveyState.name -r-* SurveyState
+
+  SurveyAction.at -d-* SurveyAction
+
+  Answer.id -u-<span class="token italic"><span class="token punctuation">*</span><span class="token content"> Answer
+  Answer.text -u-</span><span class="token punctuation">*</span></span> Answer
+  Answer.date -u-<span class="token italic"><span class="token punctuation">*</span><span class="token content"> Answer
+  Answer.userId -u-</span><span class="token punctuation">*</span></span> Answer
+  
+  Question.id -u-<span class="token italic"><span class="token punctuation">*</span><span class="token content"> Question
+  Question.text -u-</span><span class="token punctuation">*</span></span> Question
+  Question.type -u-* Question
+
+  Survey.id -d-<span class="token italic"><span class="token punctuation">*</span><span class="token content"> Survey
+  Survey.text -d-</span><span class="token punctuation">*</span></span> Survey
+  Survey.type -d-<span class="token italic"><span class="token punctuation">*</span><span class="token content"> Survey
+  Survey.topic -d-</span><span class="token punctuation">*</span></span> Survey
+  Survey.date -d-* Survey
+
+
+  User &quot;1,0&quot; -u- &quot;1, 1&quot; Expert
+  Expert &quot;0,<span class="token italic"><span class="token punctuation">*</span><span class="token content">&quot;-r- &quot;1,1&quot; Answer
+  Question&quot;1,1&quot;-l- &quot;0,</span><span class="token punctuation">*</span></span>&quot; Answer
+  Survey &quot;1,1&quot; -d- &quot;0,<span class="token italic"><span class="token punctuation">*</span><span class="token content">&quot; Question
+  Survey &quot;1,1&quot; -u- &quot;0,</span><span class="token punctuation">*</span></span>&quot; SurveyAction
+  SurveyAction&quot;1,1&quot; -u- &quot;0,<span class="token italic"><span class="token punctuation">*</span><span class="token content">&quot; SurveyState
+  Question &quot;1,1&quot; -d- &quot;0,</span><span class="token punctuation">*</span></span>&quot; Alt
+  Answer&quot;1,1&quot; -u- &quot;0,<span class="token italic"><span class="token punctuation">*</span><span class="token content">&quot; SelectedAlt
+  SelectedAlt&quot;1,1&quot;-u- &quot;0,</span><span class="token punctuation">*</span></span>&quot;Alt
+@enduml
+</code></pre></div><center style="border-radius:4px;border:1px solid #cfd7e6;box-shadow:0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);padding:1em;"><img src="https://www.plantuml.com/plantuml/svg/ZPP1Ru8m5CVlV8g6tOmOlHiYopXucCac9jkHIPUm810eKx_zsjVILw3O6Gxq___n-lhwAEvQbZQiknGUBLdExkH82tfcD8iAHhRR-93iayymz3n2530oJ7sLPzmwd5wVu_Sm94_Vy1iYZDx4yqdyaSmYzvfE4MIENVDBxqUMCchDnF1NPNhvHwpepFAgV11C0gjKfFuI9R4rLbIsLzhOYmEMipwISfL8KfbS_YYRCTMrjDdFp8fmVAjfOzzMQRaoLzHFzMLB7BbJErCWOK2ozWqRSfSqBrnCdRRjjMeo5sTV649l7MrdcwCtNUNHd6DhaVlNA_2WOLqPASgHJqzPivbGLPsVtTXSt_9hs0H15on0wXtOzecgDthYvAR6HMpb8EEo7A8kcjSqkAFED8Z2xvK2HHjheaHQu-Ba40eQRXegGdYumFIc24deiqF6Xo7gHZOZ1ofjTTIfCFJuPVOpcBrWUZYXrTM5qAvUg2wz7A8kGreT26TreDsibbouuNYg9OY_MQvzaPwu8nj_t0J4NoyNFjyguNDR5wTV3CX14KWGVVL2ogVurCetAZGakfuOxFQm8-oeR1xCQ3AdQah8R182l-vYCXp9TVMSi7UqpFZ_WZy0" alt="uml diagram"></center> <h2 id="er-модель"><a href="#er-модель" class="header-anchor">#</a> ER-модель</h2> <div class="language-md extra-class"><pre class="language-md"><code>@startuml
+entity User &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ENTITY</span><span class="token punctuation">&gt;</span></span>&gt; {
+    id:INT
+    usersname:TEXT
+    mail:TEXT
+  }
+  
+  entity Expert &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ENTITY</span><span class="token punctuation">&gt;</span></span>&gt;{
+    id:INT
+    job:TEXT
+  }
+  
+  entity Survey &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ENTITY</span><span class="token punctuation">&gt;</span></span>&gt;{
+    id:INT
+    text:TEXT
+    type:TEXT
+    topic:TEXT
+    date:DATE
+  }
+  
+  entity Question &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ENTITY</span><span class="token punctuation">&gt;</span></span>&gt;{
+    id:INT
+    type:TEXT
+    text:TEXT
+    min: int
+    max: int
+  }
+
+<span class="token code keyword">    entity Alt &lt;&lt;ENTITY&gt;&gt;{
+        id:INT
+        type:TEXT
+        text:TEXT
+    }</span>
+
+  entity Answer &lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ENTITY</span><span class="token punctuation">&gt;</span></span>&gt; {
+    userId:INT
+    id:INT
+    text:TEXT
+    data:DATE
+  }
+  
+  entity SelectedAlt {
+id: INT
+  }
+  
+  entity SurveyState {
+    name: text
+  }
+  
+  entity SurveyAction {
+    at:Date
+  }
+  
+  
+
+SurveyAction &quot;1, 1&quot; <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>-u-</span> <span class="token attr-name">&quot;0,</span> <span class="token attr-name">*&quot;</span> <span class="token attr-name">SurveyState</span> 
+<span class="token attr-name">SurveyAction</span> <span class="token attr-name">&quot;1,</span> <span class="token attr-name">1&quot;</span> <span class="token attr-name">&lt;-u-</span> <span class="token attr-name">&quot;0,</span> <span class="token attr-name">*&quot;</span> <span class="token attr-name">Survey</span>
+<span class="token attr-name">SurveyAction</span> <span class="token attr-name">-</span><span class="token punctuation">&gt;</span></span> User: actor
+SurveyAction -u-&gt; User: collaborator
+
+  Answer &quot;1, 1&quot; <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>-u-</span> <span class="token attr-name">&quot;0,</span> <span class="token attr-name">*&quot;</span> <span class="token attr-name">Question</span>
+  <span class="token attr-name">Survey</span> <span class="token attr-name">&quot;0,</span> <span class="token attr-name">*&quot;</span> <span class="token attr-name">-u-</span><span class="token punctuation">&gt;</span></span> &quot;1, 1&quot; Question
+  Answer &quot;1, 1&quot; &lt;-u- &quot;0, <span class="token italic"><span class="token punctuation">*</span><span class="token content">&quot; Expert
+  Expert &quot;1, 1&quot; &lt;-u- &quot;1, 1&quot; User
+  Question &quot;1, 1&quot;&lt;- &quot;0, </span><span class="token punctuation">*</span></span>&quot; Alt
+  
+  Answer &quot;1, 1&quot; &lt;-u- &quot;0, <span class="token italic"><span class="token punctuation">*</span><span class="token content">&quot; SelectedAlt
+  SelectedAlt &quot;1, 1&quot; &lt;-u- &quot;0, </span><span class="token punctuation">*</span></span>&quot; Alt
+@enduml
+</code></pre></div><center style="border-radius:4px;border:1px solid #cfd7e6;box-shadow:0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);padding:1em;"><img src="https://www.plantuml.com/plantuml/svg/ZLHDYuCm4BtxAuB7fSBsAY8Lwi5BeUZ2xZ7L7B9e8ZhkAgN_VSSaVbKjAmgPvCrxmvk9fnfe1KsHMqm0XuvyrAmYdXTUaYZvydrojmW-F7EZIwAM3G9gGGlc9k6dtYeepuVeWH--XYriIrR1Z6z5zorlswbnK_smxbKgi1Qc8g0hPoM1B7awXHa5vfw395p9N1jM0vVYfT2IUY5RSE4IBi0OqGx1mr8xHYN8roOyYQo5rcAATA0KzUzMg_h-H1Fjhbze2Tss96OvIu5bVT5t2mc8PjZgJmpeh55MGw5KTi11gfpMQ0hk6NCdg6KjKFRnG8usyPp68VRxWRpP2yb_WfSmnrVpxHAQWgoUpfhnD9LvJc-oeZq8ApDMRuWCquCWCw_cGB6PX1bedqdV58IOAxE0w7LV70B6YTNRtaY1_T9ExglCMjkNF6lq1hW7dPZ8yE_m1m00" alt="uml diagram"></center> <h2 id="реляціина-схема"><a href="#реляціина-схема" class="header-anchor">#</a> Реляційна схема</h2> <p><img src="https://github.com/readme-experts/expert-surveys/blob/lab5/src/img/eer.png" alt="3"></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Останнє оновлення:</span> <span class="time">12/16/2021, 2:47:21 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/expert-surveys/use%20cases/" class="prev">
+        Розроблення вимог до функціональности системи
+      </a></span> <span class="next"><a href="/expert-surveys/software/">
+        Реалізація інформаційного та програмного забезпечення
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/expert-surveys/assets/js/app.2e01ffb3.js" defer></script><script src="/expert-surveys/assets/js/2.d4f7208e.js" defer></script><script src="/expert-surveys/assets/js/17.83de84c4.js" defer></script>
+  </body>
+</html>
