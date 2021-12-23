@@ -20,6 +20,23 @@ app.get('/user/:id', async (req, res) => {
 });
 
 
+app.post('/user', async (req, res) => {
+    await models.User.create({
+        mail: req.body.mail,
+        username: req.body.username,
+    });
+    res.send('{response: 1}');
+});
+
+app.post('/expert', async (req, res) => {
+    await models.Expert.create({
+        job: req.body.job,
+        User_id: req.body.id,
+    });
+    res.send('{response: 1}');
+});
+
+
 app.listen(3000, async () => {
     await connection.sync();
     console.log('Api started');
