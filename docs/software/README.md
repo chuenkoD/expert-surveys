@@ -1,6 +1,7 @@
 # Реалізація інформаційного та програмного забезпечення
 
 SQL-скрипт для створення на початкового наповнення бази даних:
+```sql
 -- -----------------------------------------------------
 -- Data for table `ExpertSurveys`.`User`
 -- -----------------------------------------------------
@@ -135,8 +136,10 @@ INSERT INTO `ExpertSurveys`.`Answer` (`id`, `text`, `date`, `Expert_id`, `Questi
 INSERT INTO `ExpertSurveys`.`Answer` (`id`, `text`, `date`, `Expert_id`, `Question_id`, `SelectedAlt_id`) VALUES (10, 'text10', '1970-01-01', 6, 1, 4);
 
 COMMIT;
+```
 
 RESTfull сервіс для управління даними
+```js
 const connection = require('./connection');
 const express = require('express');
 const models = require('./models');
@@ -232,7 +235,7 @@ app.listen(3000, async () => {
     await connection.sync();
     console.log('Api started');
 })
-
+```
 Опис кінцевих точок RESTfull сервісу доступу до даних
 GET
 /users - Отримати список користувачів
