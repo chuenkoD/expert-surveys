@@ -46,6 +46,26 @@ app.post('/expert', async (req, res) => {
     }
 });
 
+app.put('/user/:id', async (req, res) => {
+    if(req.body.updateData) {
+        const user = await models.User.findByPk(req.params.id);
+        await user.update(req.body.updateData);
+    }
+    else {
+        res.send('{error: no data}');
+    }
+});
+
+app.put('/expert/:id', async (req, res) => {
+    if(req.body.updateData) {
+        const expert = await models.Expert.findByPk(req.params.id);
+        await expert.update(req.body.updateData);
+    }
+    else {
+        res.send('{error: no data}');
+    }
+});
+
 
 app.listen(3000, async () => {
     await connection.sync();
