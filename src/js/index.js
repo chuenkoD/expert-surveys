@@ -15,10 +15,14 @@ app.get('/experts', async (req, res) => {
 });
 
 app.get('/user/:id', async (req, res) => {
-    const user = (await models.Expert.findAll())[req.params.id];
+    const user = (await models.User.findAll())[req.params.id];
     res.send(user);
 });
 
+app.get('/expert/:id', async (req, res) => {
+    const user = (await models.Expert.findAll())[req.params.id];
+    res.send(user);
+});
 
 app.post('/user', async (req, res) => {
     try {
@@ -27,10 +31,9 @@ app.post('/user', async (req, res) => {
             username: req.body.username,
         });
         res.send('{response: 1}');
+    } catch (e) {
+        res.send(`{error: ${e.message}`);
     }
-    catch (e) {
-            res.send(`{error: ${e.message}`);
-        }
 });
 
 app.post('/expert', async (req, res) => {
@@ -40,30 +43,46 @@ app.post('/expert', async (req, res) => {
             User_id: req.body.id,
         });
         res.send('{response: 1}');
-    }
-    catch (e) {
+    } catch (e) {
         res.send(`{error: ${e.message}`);
     }
 });
 
 app.put('/user/:id', async (req, res) => {
-    if(req.body.updateData) {
+    if (req.body.updateData) {
         const user = await models.User.findByPk(req.params.id);
         await user.update(req.body.updateData);
-    }
-    else {
+    } else {
         res.send('{error: no data}');
     }
 });
 
 app.put('/expert/:id', async (req, res) => {
-    if(req.body.updateData) {
+    if (req.body.updateData) {
         const expert = await models.Expert.findByPk(req.params.id);
         await expert.update(req.body.updateData);
-    }
-    else {
+    } else {
         res.send('{error: no data}');
     }
+});
+
+app.delete('/user/:id', async (req, res) => {
+    try {
+        await models.Expert.destroy({
+                where: {
+                    User_id: req.params.id
+                }
+            }
+        );
+        await models.User.destroy({
+            where: {
+                id: req.params.id
+            }
+        });
+    } catch (e) {
+        res.send(`{error: ${e.message}`);
+    }
+
 });
 
 
