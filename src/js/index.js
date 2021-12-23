@@ -1,8 +1,11 @@
 const connection = require('./connection');
 const express = require('express');
 const models = require('./models');
+const db = require('mysql2');
+
 
 const app = express();
+app.use(express.json());
 
 app.get('/users', async (req, res) => {
     const users = await models.User.findAll();
@@ -51,7 +54,9 @@ app.post('/expert', async (req, res) => {
 app.put('/user/:id', async (req, res) => {
     if (req.body.updateData) {
         const user = await models.User.findByPk(req.params.id);
+        console.log(user);
         await user.update(req.body.updateData);
+        res.send('{response: 1}');
     } else {
         res.send('{error: no data}');
     }
@@ -61,6 +66,7 @@ app.put('/expert/:id', async (req, res) => {
     if (req.body.updateData) {
         const expert = await models.Expert.findByPk(req.params.id);
         await expert.update(req.body.updateData);
+        res.send('{response: 1}');
     } else {
         res.send('{error: no data}');
     }
@@ -79,6 +85,7 @@ app.delete('/user/:id', async (req, res) => {
                 id: req.params.id
             }
         });
+        res.send('{response: 1}');
     } catch (e) {
         res.send(`{error: ${e.message}`);
     }
